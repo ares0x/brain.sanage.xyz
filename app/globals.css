@@ -1,0 +1,354 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ═══════════════════════════════════════
+   DESIGN SYSTEM: MORNING SOFT
+   晨间柔光 — 温暖轻盈的认知训练设计系统
+   ═══════════════════════════════════════ */
+
+@theme inline {
+  /* ── Fonts ── */
+  --font-sans: var(--font-sans), "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: var(--font-serif), "Noto Serif SC", "Songti SC", serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", "SF Mono", monospace;
+  --font-heading: var(--font-serif);
+
+  /* ── Core Colors ── */
+  --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-background-warm: var(--background-warm);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-secondary: var(--muted-secondary);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* ── Chart / Accent Colors ── */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* ── Game Colors ── */
+  --color-game-stroop-red: var(--game-stroop-red);
+  --color-game-stroop-green: var(--game-stroop-green);
+  --color-game-stroop-blue: var(--game-stroop-blue);
+  --color-game-stroop-yellow: var(--game-stroop-yellow);
+  --color-game-stroop-purple: var(--game-stroop-purple);
+  --color-game-stroop-orange: var(--game-stroop-orange);
+  --color-game-schulte-highlight: var(--game-schulte-highlight);
+  --color-game-nback-stimulus: var(--game-nback-stimulus);
+
+  /* ── Radius ── */
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-3xl: calc(var(--radius) * 3);
+  --radius-4xl: calc(var(--radius) * 4);
+}
+
+/* ═══════════════════════════════════════
+   COLOR TOKENS — Light & Warm
+   ═══════════════════════════════════════ */
+
+:root {
+  /* ── Base ── */
+  --background: #FDF8F3;
+  --background-soft: #FAF7F4;
+  --background-warm: #FFF9F0;
+  --foreground: #3D2B1F;
+
+  /* ── Surface ── */
+  --card: #FFFFFF;
+  --card-foreground: #3D2B1F;
+  --popover: #FFFFFF;
+  --popover-foreground: #3D2B1F;
+
+  /* ── Primary: Soft Coral ── */
+  --primary: #D4847C;
+  --primary-foreground: #FFFFFF;
+
+  /* ── Secondary: Warm Sand ── */
+  --secondary: #F5EDE5;
+  --secondary-foreground: #5A4A3F;
+
+  /* ── Muted ── */
+  --muted: #F5EDE5;
+  --muted-foreground: #7A6A5F;
+  --muted-secondary: #928373;
+
+  /* ── Accent: Sage Green ── */
+  --accent: #E8F0EC;
+  --accent-foreground: #4A6B5A;
+  --accent-hover: #DDD5CC;
+
+  /* ── Destructive: Soft Rose ── */
+  --destructive: #C97B7B;
+
+  /* ── Borders ── */
+  --border: #EDE5DB;
+  --border-light: #E8E0D6;
+  --input: #F5EDE5;
+  --ring: #D4847C;
+
+  /* ── Charts ── */
+  --chart-1: #D4847C;
+  --chart-2: #8FB8A8;
+  --chart-3: #E8C496;
+  --chart-4: #6BAF8F;
+  --chart-5: #C97B7B;
+
+  /* ── Radius ── */
+  --radius: 1rem;
+
+  /* ── Sidebar ── */
+  --sidebar: #FAF5EF;
+  --sidebar-foreground: #3D2B1F;
+  --sidebar-primary: #D4847C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5EDE5;
+  --sidebar-accent-foreground: #5A4A3F;
+  --sidebar-border: #EDE5DB;
+  --sidebar-ring: #D4847C;
+
+  /* ── Game Semantic Colors ── */
+  --game-stroop-red: #E05A5A;
+  --game-stroop-green: #4AAD7A;
+  --game-stroop-blue: #5A9DE0;
+  --game-stroop-yellow: #D4A832;
+  --game-stroop-purple: #A87AD4;
+  --game-stroop-orange: #D4884A;
+  --game-schulte-highlight: #E8F0EC;
+  --game-nback-stimulus: #8FB8A8;
+}
+
+/* ═══════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════ */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(212, 132, 124, 0.25);
+    color: #3D2B1F;
+  }
+}
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY UTILITIES
+   ═══════════════════════════════════════ */
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ═══════════════════════════════════════
+   SOFT SHADOWS
+   ═══════════════════════════════════════ */
+
+.shadow-soft {
+  box-shadow: 0 2px 16px rgba(61, 43, 31, 0.06),
+              0 1px 4px rgba(61, 43, 31, 0.04);
+}
+
+.shadow-soft-hover {
+  box-shadow: 0 4px 24px rgba(61, 43, 31, 0.08),
+              0 2px 8px rgba(61, 43, 31, 0.05);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 8px 32px rgba(61, 43, 31, 0.08),
+              0 4px 12px rgba(61, 43, 31, 0.05);
+}
+
+/* ═══════════════════════════════════════
+   CARD STYLES
+   ═══════════════════════════════════════ */
+
+.card-soft {
+  background: #FFFFFF;
+  border: 1px solid #EDE5DB;
+  box-shadow: 0 2px 16px rgba(61, 43, 31, 0.04),
+              0 1px 4px rgba(61, 43, 31, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-soft-hover:hover {
+  box-shadow: 0 4px 24px rgba(61, 43, 31, 0.07),
+              0 2px 8px rgba(61, 43, 31, 0.04);
+  border-color: #E0D5C8;
+}
+
+/* ═══════════════════════════════════════
+   BUTTON STYLES
+   ═══════════════════════════════════════ */
+
+.btn-coral {
+  position: relative;
+  background: linear-gradient(135deg, #D4847C, #C97B7B);
+  color: #FFFFFF;
+  border: none;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(212, 132, 124, 0.3);
+}
+
+.btn-coral:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(212, 132, 124, 0.4);
+}
+
+.btn-coral:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(212, 132, 124, 0.3);
+}
+
+.btn-coral-outline {
+  background: transparent;
+  border: 1.5px solid #D4847C;
+  color: #D4847C;
+  transition: all 0.25s ease;
+}
+
+.btn-coral-outline:hover {
+  background: rgba(212, 132, 124, 0.08);
+  border-color: #C97B7B;
+}
+
+/* ═══════════════════════════════════════
+   CUSTOM ANIMATIONS
+   ═══════════════════════════════════════ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.35s ease-out forwards;
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 2.5s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0.08s; }
+.stagger-2 { animation-delay: 0.16s; }
+.stagger-3 { animation-delay: 0.24s; }
+.stagger-4 { animation-delay: 0.32s; }
+.stagger-5 { animation-delay: 0.40s; }
+
+/* ═══════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD5CC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8BEB3;
+}
+
+/* ═══════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

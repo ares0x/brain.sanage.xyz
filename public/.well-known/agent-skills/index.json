@@ -1,0 +1,54 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-index/v0.2.0.json",
+  "skills": [
+    {
+      "name": "cognitive-assessment",
+      "type": "capability",
+      "description": "提供基于经典心理学实验范式的在线认知能力自测工具，包括注意力、工作记忆、反应速度等维度。",
+      "url": "https://brain.sanage.xyz/",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "stroop-test",
+      "type": "tool",
+      "description": "斯特鲁普测试（Stroop Test）— 测量认知抑制与选择性注意力。",
+      "url": "https://brain.sanage.xyz/stroop-test",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "schulte-grid",
+      "type": "tool",
+      "description": "舒尔特方格 — 测量视觉搜索速度与注意力广度。",
+      "url": "https://brain.sanage.xyz/schulte-grid",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "nback-memory",
+      "type": "tool",
+      "description": "N-Back 工作记忆训练 — 测量工作记忆更新与维持能力。",
+      "url": "https://brain.sanage.xyz/nback-memory",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "reaction-time",
+      "type": "tool",
+      "description": "反应速度测试 — 测量基础神经反应速度。",
+      "url": "https://brain.sanage.xyz/reaction-time",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "attention-span",
+      "type": "tool",
+      "description": "专注力追踪 — 测量持续注意稳定性。",
+      "url": "https://brain.sanage.xyz/attention-span",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "digit-span",
+      "type": "tool",
+      "description": "数字广度测试 — 测量工作记忆容量。",
+      "url": "https://brain.sanage.xyz/digit-span",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

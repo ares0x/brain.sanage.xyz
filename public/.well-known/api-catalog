@@ -1,0 +1,35 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://brain.sanage.xyz/",
+      "rel": "service-doc",
+      "href": "https://brain.sanage.xyz/guide",
+      "title": "Brain Sanage 使用指南"
+    },
+    {
+      "anchor": "https://brain.sanage.xyz/",
+      "rel": "about",
+      "href": "https://brain.sanage.xyz/about",
+      "title": "关于 Brain Sanage"
+    },
+    {
+      "anchor": "https://brain.sanage.xyz/",
+      "rel": "privacy-policy",
+      "href": "https://brain.sanage.xyz/privacy",
+      "title": "隐私政策"
+    },
+    {
+      "anchor": "https://brain.sanage.xyz/",
+      "rel": "terms-of-service",
+      "href": "https://brain.sanage.xyz/terms",
+      "title": "使用条款"
+    },
+    {
+      "anchor": "https://brain.sanage.xyz/",
+      "rel": "agent-skills",
+      "href": "https://brain.sanage.xyz/.well-known/agent-skills/index.json",
+      "title": "Agent Skills Discovery Index",
+      "type": "application/json"
+    }
+  ]
+}

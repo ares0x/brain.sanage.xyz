@@ -1,0 +1,20 @@
+{
+  "schema_version": "https://modelcontextprotocol.io/schema/2025-03-26/server-card.json",
+  "server_info": {
+    "name": "Brain Sanage",
+    "version": "1.0.0",
+    "description": "基于经典心理学实验范式的在线认知能力自测平台"
+  },
+  "capabilities": {
+    "tools": false,
+    "resources": false,
+    "prompts": false
+  },
+  "transport": {
+    "type": "none",
+    "note": "Brain Sanage 是纯前端静态网站，不提供 MCP 服务端点。所有交互在浏览器本地完成。"
+  },
+  "contact": {
+    "url": "https://brain.sanage.xyz/about"
+  }
+}
